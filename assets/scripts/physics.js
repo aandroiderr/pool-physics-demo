@@ -29,17 +29,19 @@ var Physics = {
         var space = this.world = new cp.Space();
         space.iterations = 60;
 //        space.sleepTimeThreshold = 0.5;
-        //space.damping = 1;
+        // space.damping = 1;
         // Gravity:
-        space.gravity = cp.v(0,-1200);//重力
-        space.collisionSlop = 0.5;
+        // space.gravity = cp.v(0,-1200);//重力
+        // space.collisionSlop = 0.5;
 
-        var emptyFunction = function(){return true};
+        var emptyFunction = function() {
+            return true;
+        };
         this.inited = true;
     },
-    update:function(){
+    update:function(dt){
         if (this.inited)
-            this.world.step(CPSTEP);
+            this.world.step(dt);
     },
     addCollisionHandler: function(a, b, begin, preSolve, postSolve, separate) {
         if (this.inited) {
@@ -94,9 +96,16 @@ var Physics = {
                 space.addPostStepCallback(this._realClear.bind(this));
             else this._realClear();
         }
-    }
+    },
+
+    StaticObject: null,
+    StaticPolyObject: null,
+    StaticSensor: null,
+    DynamicSensor: null,
+    PhysicsObject: null,
+    CircleObject: null
 };
-var StaticObject = cc.Class.extend({
+Physics.StaticObject = cc._Class.extend({
     view: null,
     shape: null,
 
@@ -124,7 +133,7 @@ var StaticObject = cc.Class.extend({
         Physics.world.removeStaticShape(this.shape);
     }
 });
-var StaticPolyObject = cc.Class.extend({
+Physics.StaticPolyObject = cc._Class.extend({
     view: null,
     shape: null,
     ctor : function(view, verts, offset) {
@@ -147,7 +156,7 @@ var StaticPolyObject = cc.Class.extend({
     }
 });
 
-var StaticSensor = cc.Class.extend({
+Physics.StaticSensor = cc._Class.extend({
     view: null,
     shape: null,
 
@@ -163,7 +172,7 @@ var StaticSensor = cc.Class.extend({
         Physics.world.removeStaticShape(this.shape);
     }
 });
-var DynamicSensor = cc.Class.extend({
+Physics.DynamicSensor = cc._Class.extend({
     body: null,
     shape: null,
     view: null,
@@ -183,7 +192,7 @@ var DynamicSensor = cc.Class.extend({
         Physics.world.removeBody(this.body);
     }
 });
-var PhysicsObject = cc.Class.extend({
+Physics.PhysicsObject = cc._Class.extend({
     body:null,
     shape:null,
     type:null,
@@ -244,7 +253,7 @@ var PhysicsObject = cc.Class.extend({
     }
 });
 
-var CircleObject = PhysicsObject.extend({
+Physics.CircleObject = Physics.PhysicsObject.extend({
     ctor:function(weight, r, maxSpeed, view, pos){
         this.body = new cp.Body(weight, cp.momentForCircle(weight, 0, r, cp.v(0, 0)));
         this.shape = new cp.CircleShape(this.body, r, cp.v(0, 0));
@@ -259,3 +268,5 @@ var CircleObject = PhysicsObject.extend({
         this.shape.obj = this;
     }
 });
+
+module.exports = Physics;
