@@ -299,7 +299,8 @@
     "node": {
       "__id__": 6
     },
-    "_enabled": true
+    "_enabled": true,
+    "number": 0
   },
   {
     "__type__": "cc.Node",
@@ -382,7 +383,8 @@
     "node": {
       "__id__": 9
     },
-    "_enabled": true
+    "_enabled": true,
+    "number": 0
   },
   {
     "__type__": "cc.Node",
@@ -465,7 +467,8 @@
     "node": {
       "__id__": 12
     },
-    "_enabled": true
+    "_enabled": true,
+    "number": 0
   },
   {
     "__type__": "cc.Node",
@@ -548,7 +551,8 @@
     "node": {
       "__id__": 15
     },
-    "_enabled": true
+    "_enabled": true,
+    "number": 0
   },
   {
     "__type__": "cc.Node",
@@ -631,7 +635,8 @@
     "node": {
       "__id__": 18
     },
-    "_enabled": true
+    "_enabled": true,
+    "number": 0
   },
   {
     "__type__": "cc.Node",
@@ -714,7 +719,8 @@
     "node": {
       "__id__": 21
     },
-    "_enabled": true
+    "_enabled": true,
+    "number": 0
   },
   {
     "__type__": "cc.Node",
@@ -797,7 +803,8 @@
     "node": {
       "__id__": 24
     },
-    "_enabled": true
+    "_enabled": true,
+    "number": 0
   },
   {
     "__type__": "cc.Node",
@@ -880,7 +887,8 @@
     "node": {
       "__id__": 27
     },
-    "_enabled": true
+    "_enabled": true,
+    "number": 0
   },
   {
     "__type__": "cc.Node",
@@ -963,7 +971,8 @@
     "node": {
       "__id__": 30
     },
-    "_enabled": true
+    "_enabled": true,
+    "number": 0
   },
   {
     "__type__": "cc.Canvas",
@@ -973,7 +982,7 @@
       "__id__": 2
     },
     "_enabled": true,
-    "_fitWidth": false,
+    "_fitWidth": true,
     "_fitHeight": false
   }
 ]
