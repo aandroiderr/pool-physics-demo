@@ -67,7 +67,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 720,
+      "width": 640,
       "height": 480
     },
     "_children": [
@@ -123,6 +123,12 @@
     "_components": [
       {
         "__id__": 33
+      },
+      {
+        "__id__": 34
+      },
+      {
+        "__id__": 35
       }
     ],
     "_prefab": null
@@ -150,7 +156,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 720,
+      "width": 640,
       "height": 385
     },
     "_children": [],
@@ -160,7 +166,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 360,
+      "x": 320,
       "y": 240
     },
     "_skewX": 0,
@@ -300,7 +306,8 @@
       "__id__": 6
     },
     "_enabled": true,
-    "number": 0
+    "phyObj": null,
+    "type": 0
   },
   {
     "__type__": "cc.Node",
@@ -384,7 +391,8 @@
       "__id__": 9
     },
     "_enabled": true,
-    "number": 0
+    "phyObj": null,
+    "type": 1
   },
   {
     "__type__": "cc.Node",
@@ -468,7 +476,8 @@
       "__id__": 12
     },
     "_enabled": true,
-    "number": 0
+    "phyObj": null,
+    "type": 1
   },
   {
     "__type__": "cc.Node",
@@ -552,7 +561,8 @@
       "__id__": 15
     },
     "_enabled": true,
-    "number": 0
+    "phyObj": null,
+    "type": 1
   },
   {
     "__type__": "cc.Node",
@@ -636,7 +646,8 @@
       "__id__": 18
     },
     "_enabled": true,
-    "number": 0
+    "phyObj": null,
+    "type": 1
   },
   {
     "__type__": "cc.Node",
@@ -720,7 +731,8 @@
       "__id__": 21
     },
     "_enabled": true,
-    "number": 0
+    "phyObj": null,
+    "type": 1
   },
   {
     "__type__": "cc.Node",
@@ -804,7 +816,8 @@
       "__id__": 24
     },
     "_enabled": true,
-    "number": 0
+    "phyObj": null,
+    "type": 1
   },
   {
     "__type__": "cc.Node",
@@ -888,7 +901,8 @@
       "__id__": 27
     },
     "_enabled": true,
-    "number": 0
+    "phyObj": null,
+    "type": 1
   },
   {
     "__type__": "cc.Node",
@@ -972,7 +986,8 @@
       "__id__": 30
     },
     "_enabled": true,
-    "number": 0
+    "phyObj": null,
+    "type": 1
   },
   {
     "__type__": "cc.Canvas",
@@ -982,7 +997,41 @@
       "__id__": 2
     },
     "_enabled": true,
-    "_fitWidth": true,
+    "_fitWidth": false,
     "_fitHeight": false
+  },
+  {
+    "__type__": "6db33nAO2xER6r5mtCHKbXR",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "CUE_BALL_WEIGHT": 2,
+    "BALL_WEIGHT": 0.5,
+    "BALL_R": 15,
+    "MAX_SPEED": 600,
+    "FRICTION": 2,
+    "ELASTICITY": 0.9,
+    "IMPULSE": 1000,
+    "WALL_WIDTH": 32,
+    "WALL_FRICTION": 1,
+    "WALL_ELASTICITY": 2
+  },
+  {
+    "__type__": "0ccb0Zik3NAA5WJ2AKPmctJ",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "space": null,
+    "debugNode": null,
+    "leftWall": null,
+    "rightWall": null,
+    "topWall": null,
+    "bottomWall": null
   }
 ]

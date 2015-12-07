@@ -1,5 +1,8 @@
-cc.Class({
+var Global = cc.Class({
     extends: cc.Component,
+    editor: {
+        executeInEditMode: true
+    },
 
     properties: {
         CUE_BALL_WEIGHT : 2,
@@ -13,4 +16,7 @@ cc.Class({
         WALL_FRICTION : 1.0,
         WALL_ELASTICITY : 2.0
     },
+    onLoad: function () {
+        Global.instance = this;
+    }
 });

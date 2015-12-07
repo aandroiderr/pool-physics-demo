@@ -1,4 +1,4 @@
-var globals = new (require('./GlobalSettings'))();
+var Globals = require('./GlobalSettings');
 var Physics = require('./physics');
 
 BallType = cc.Enum({
@@ -15,27 +15,46 @@ cc.Class({
             visible: false
         },
 
-        _type: BallType.NORMAL,
         type: {
-            default: BallType.NORMAL,
-            type: cc.Enum,
-            set: function (type) {
-                this._type = type;
-                if (type === BallType.CUE) {
-                    this.weight = globals.CUE_BALL_WEIGHT;
-                    this.phyObj.body.setMass(this.weight);
-                }
-            },
-            get: function () {
-                return this._type;
-            }
+            type: BallType,
+            default: BallType.NORMAL
         },
 
-        weight : globals.BALL_WEIGHT,
-        maxSpeed : globals.MAX_SPEED,
-        r : globals.BALL_R,
-        friction : globals.FRICTION,
-        elasticity : globals.ELASTICITY,
+        weight : {
+            get: function () {
+                if (this.type === BallType.CUE) {
+                    return Globals.instance.CUE_BALL_WEIGHT;
+                }
+                else {
+                    return Globals.instance.BALL_WEIGHT;
+                }
+            },
+            readonly: true
+        },
+        maxSpeed : {
+            get: function () {
+                return Globals.instance.MAX_SPEED;
+            },
+            readonly: true
+        },
+        r : {
+            get: function () {
+                return Globals.instance.BALL_R;
+            },
+            readonly: true
+        },
+        friction : {
+            get: function () {
+                return Globals.instance.FRICTION;
+            },
+            readonly: true
+        },
+        elasticity : {
+            get: function () {
+                return Globals.instance.ELASTICITY;
+            },
+            readonly: true
+        },
     },
 
     initPhysics : function () {
@@ -52,7 +71,7 @@ cc.Class({
     },
 
     // use this for initialization
-    onLoad: function () {
+    start: function () {
         this.initPhysics();
         var self = this;
         cc.eventManager.addListener({
@@ -71,7 +90,7 @@ cc.Class({
     },
 
     fire: function () {
-        var impules = cp.v(-globals.IMPULSE, 0);
+        var impules = cp.v(-Globals.instance.IMPULSE, 0);
         this.phyObj.body.applyImpulse(impules, cp.v(0,0));
     },
 
