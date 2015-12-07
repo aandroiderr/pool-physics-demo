@@ -1,9 +1,5 @@
 var Physics = require('./physics');
-var globals = new (require('./GlobalSettings'))();
-
-var WallW = globals.WALL_WIDTH;
-var WallElasticity = globals.WALL_ELASTICITY;
-var WallFriction = globals.WALL_FRICTION;
+var Globals = require('./GlobalSettings');
 
 cc.Class({
     extends: cc.Component,
@@ -40,6 +36,10 @@ cc.Class({
         this.space = Physics.world;
         // Gravity
         this.space.gravity = cp.v(0, 0);
+
+        var WallW = Globals.instance.WALL_WIDTH;
+        var WallElasticity = Globals.instance.WALL_ELASTICITY;
+        var WallFriction = Globals.instance.WALL_FRICTION;
 
         var w = cc.winSize.width, h = cc.winSize.height;
         this.leftWall = new Physics.StaticObject(0, 0, WallW, h, null);

@@ -1012,12 +1012,12 @@
     "BALL_WEIGHT": 0.5,
     "BALL_R": 15,
     "MAX_SPEED": 600,
-    "FRICTION": 2,
+    "FRICTION": 100,
     "ELASTICITY": 0.9,
     "IMPULSE": 1000,
     "WALL_WIDTH": 32,
-    "WALL_FRICTION": 1,
-    "WALL_ELASTICITY": 2
+    "WALL_FRICTION": 100,
+    "WALL_ELASTICITY": 1
   },
   {
     "__type__": "0ccb0Zik3NAA5WJ2AKPmctJ",
