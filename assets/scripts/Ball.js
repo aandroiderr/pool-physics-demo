@@ -20,41 +20,54 @@ cc.Class({
             default: BallType.NORMAL
         },
 
-        weight : {
-            get: function () {
-                if (this.type === BallType.CUE) {
-                    return Globals.instance.CUE_BALL_WEIGHT;
-                }
-                else {
-                    return Globals.instance.BALL_WEIGHT;
-                }
-            },
-            readonly: true
-        },
-        maxSpeed : {
-            get: function () {
-                return Globals.instance.MAX_SPEED;
-            },
-            readonly: true
-        },
-        r : {
-            get: function () {
-                return Globals.instance.BALL_R;
-            },
-            readonly: true
-        },
-        friction : {
-            get: function () {
-                return Globals.instance.FRICTION;
-            },
-            readonly: true
-        },
-        elasticity : {
-            get: function () {
-                return Globals.instance.ELASTICITY;
-            },
-            readonly: true
-        },
+        // weight : {
+        //     get: function () {
+        //         if (this.type === BallType.CUE) {
+        //             return Globals.instance.CUE_BALL_WEIGHT;
+        //         }
+        //         else {
+        //             return Globals.instance.BALL_WEIGHT;
+        //         }
+        //     },
+        //     readonly: true
+        // },
+        // maxSpeed : {
+        //     get: function () {
+        //         return Globals.instance.MAX_SPEED;
+        //     },
+        //     readonly: true
+        // },
+        // r : {
+        //     get: function () {
+        //         return Globals.instance.BALL_R;
+        //     },
+        //     readonly: true
+        // },
+        // friction : {
+        //     get: function () {
+        //         return Globals.instance.FRICTION;
+        //     },
+        //     readonly: true
+        // },
+        // elasticity : {
+        //     get: function () {
+        //         return Globals.instance.ELASTICITY;
+        //     },
+        //     readonly: true
+        // },
+    },
+
+    onLoad: function() {
+        if (this.type === BallType.CUE) {
+            this.weight = Globals.instance.CUE_BALL_WEIGHT;
+        }
+        else {
+            this.weight = Globals.instance.BALL_WEIGHT;
+        } 
+        this.maxSpeed = Globals.instance.MAX_SPEED;
+        this.r = Globals.instance.BALL_R;
+        this.friction = Globals.instance.FRICTION;
+        this.elasticity = Globals.instance.ELASTICITY;
     },
 
     initPhysics : function () {
@@ -74,15 +87,19 @@ cc.Class({
     start: function () {
         this.initPhysics();
         var self = this;
+        if (self.type !== BallType.CUE) return;
         cc.eventManager.addListener({
             event: cc.EventListener.TOUCH_ALL_AT_ONCE,
             onTouchesEnded: function(touches, event){
-                var sprite = self.getComponent(cc.SpriteRenderer)._sgNode;
-                var pos = touches[0].getLocation();
-                var s = sprite.getContentSize();
-                if (cc.rectContainsPoint(cc.rect(0, 0, s.width, s.height), sprite.convertToNodeSpace(pos))) {
-                    self.fire();
-                }
+                // var sprite = self.getComponent(cc.SpriteRenderer)._sgNode;
+                // var pos = touches[0].getLocation();
+                // var s = sprite.getContentSize();
+
+                // touch always kicks cue ball
+                self.fire();
+
+                Globals.instance.hideInstruction();
+
                 // Stop propagation, so yellow blocks will not be able to receive event.
                 event.stopPropagation();
             }

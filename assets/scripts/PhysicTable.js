@@ -43,9 +43,9 @@ cc.Class({
 
         var w = cc.winSize.width, h = cc.winSize.height;
         this.leftWall = new Physics.StaticObject(0, 0, WallW, h, null);
-        this.topWall = new Physics.StaticObject(0, h-50-WallW, w, WallW, null);
+        this.topWall = new Physics.StaticObject(0, h-WallW, w, WallW, null);
         this.rightWall = new Physics.StaticObject(w-WallW, 0, WallW, h, null);
-        this.bottomWall = new Physics.StaticObject(0, 50, w, WallW, null);
+        this.bottomWall = new Physics.StaticObject(0, 0, w, WallW, null);
 
         this.leftWall.setElasticity(WallElasticity);
         this.leftWall.setFriction(WallFriction);
@@ -56,6 +56,15 @@ cc.Class({
         this.bottomWall.setElasticity(WallElasticity);
         this.bottomWall.setFriction(WallFriction);
     },
+
+    // use this for initialization
+    onLoad: function () {
+        this.createPhysicsWorld();
+        if (Globals.instance.debugDisplay) {
+            this.setupDebugNode();
+        } 
+    },
+
     setupDebugNode : function (){
         this.debugNode = cc.PhysicsDebugNode.create( this.space );
         this.debugNode.visible = true;
@@ -63,13 +72,7 @@ cc.Class({
         var parent = this.node._sgNode;
         this.debugNode.setPosition(-parent.x, -parent.y);
         parent.addChild( this.debugNode, 100 );
-    },
-
-    // use this for initialization
-    onLoad: function () {
-        this.createPhysicsWorld();
-        this.setupDebugNode();
-    },
+    }, 
 
     // called every frame
     update: function (dt) {
