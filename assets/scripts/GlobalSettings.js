@@ -11,6 +11,11 @@ var Global = cc.Class({
             default: null,
             type: cc.ENode
         },
+        ballGroups: {
+            default: [],
+            type: [cc.ENode]
+        },
+        ballNumberLevel: 1,
         CUE_BALL_WEIGHT : 2,
         BALL_WEIGHT : 1,
         BALL_R : 15,
@@ -26,6 +31,13 @@ var Global = cc.Class({
     onLoad: function () {
         Global.instance = this;
         this.startInstructionBlink();
+        for (var i = 0; i < this.ballGroups.length; ++i) {
+            if (this.ballNumberLevel < i) {
+                this.ballGroups[i].active = false;
+            }
+        }
+
+        cc.director.setDisplayStats(true);
     },
 
     startInstructionBlink: function() {

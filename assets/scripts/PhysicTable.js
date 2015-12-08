@@ -63,6 +63,8 @@ cc.Class({
         if (Globals.instance.debugDisplay) {
             this.setupDebugNode();
         } 
+        // cc.find('Canvas/balls')._sgNode.visible = false;
+        // cc.find('Canvas/pool_table')._sgNode.visible = false;
     },
 
     setupDebugNode : function (){
