@@ -5,6 +5,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        canvas: {
+            default:null,
+            type: cc.Node
+        },
         space: {
             default: null,
             visible: false
@@ -41,7 +45,7 @@ cc.Class({
         var WallElasticity = Globals.instance.WALL_ELASTICITY;
         var WallFriction = Globals.instance.WALL_FRICTION;
 
-        var w = cc.winSize.width, h = cc.winSize.height;
+        var w = this.canvas.width, h = this.canvas.height;
         this.leftWall = new Physics.StaticObject(0, 0, WallW, h, null);
         this.topWall = new Physics.StaticObject(0, h-WallW, w, WallW, null);
         this.rightWall = new Physics.StaticObject(w-WallW, 0, WallW, h, null);

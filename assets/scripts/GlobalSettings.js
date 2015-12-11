@@ -9,11 +9,11 @@ var Global = cc.Class({
         debugDisplay: true,
         instruction: {
             default: null,
-            type: cc.ENode
+            type: cc.Node
         },
         ballGroups: {
             default: [],
-            type: [cc.ENode]
+            type: [cc.Node]
         },
         ballNumberLevel: 1,
         CUE_BALL_WEIGHT : 2,
