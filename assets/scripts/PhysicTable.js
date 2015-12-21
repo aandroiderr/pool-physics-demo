@@ -75,9 +75,9 @@ cc.Class({
         this.debugNode = cc.PhysicsDebugNode.create( this.space );
         this.debugNode.visible = true;
 
-        var parent = this.node._sgNode;
-        this.debugNode.setPosition(-parent.x, -parent.y);
-        parent.addChild( this.debugNode, 100 );
+        var parent = this.node;
+        this.debugNode.setPosition(-parent.width/2, -parent.height/2);
+        parent._sgNode.addChild( this.debugNode, 100 );
     }, 
 
     // called every frame

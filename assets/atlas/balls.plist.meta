@@ -1,5 +1,5 @@
 {
-  "ver": 0,
+  "ver": "1",
   "uuid": "c09673ed-6dd8-42b8-be69-efab04b95a6d",
   "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
   "size": {
@@ -9,7 +9,7 @@
   "type": "Texture Packer",
   "subMetas": {
     "balls_00.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "4cc6fc1e-e060-4650-bc2b-ba7ac2e620ae",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -27,7 +27,7 @@
       "subMetas": {}
     },
     "balls_01.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "3dde83b3-30f9-4124-8db2-7124e6e38398",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -45,7 +45,7 @@
       "subMetas": {}
     },
     "balls_02.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "c63d5064-c536-4524-a669-1ff6fbd35045",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -63,7 +63,7 @@
       "subMetas": {}
     },
     "balls_03.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "8b5d16ec-9705-4588-b46f-1948fb134df6",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -81,7 +81,7 @@
       "subMetas": {}
     },
     "balls_04.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "f6a0ebf6-2b70-4c9e-af8c-b6e0cd48df7d",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -99,7 +99,7 @@
       "subMetas": {}
     },
     "balls_05.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "4d7ba44d-a60b-4957-a46c-1a58d6d5220f",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -117,7 +117,7 @@
       "subMetas": {}
     },
     "balls_06.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "0e52d9e4-5e00-47af-9834-37c7cd2ce3d3",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -135,7 +135,7 @@
       "subMetas": {}
     },
     "balls_07.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "e4cd5854-c9cb-4b88-9519-cef412c1f5a9",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -153,7 +153,7 @@
       "subMetas": {}
     },
     "balls_08.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "d05e9f48-3950-44dd-9d2c-928ae6e38eb3",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -171,7 +171,7 @@
       "subMetas": {}
     },
     "balls_09.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "a4f22321-d245-4000-824c-3ed93574c24c",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -189,7 +189,7 @@
       "subMetas": {}
     },
     "balls_10.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "9da42043-f215-4eac-9e7d-db0daf3da905",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -207,7 +207,7 @@
       "subMetas": {}
     },
     "balls_11.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "5b036ea8-1fb3-4274-9be9-92cc9d65dff2",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -225,7 +225,7 @@
       "subMetas": {}
     },
     "balls_12.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "2c81198e-5ef4-4f27-ab63-8a40bc802e82",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -243,7 +243,7 @@
       "subMetas": {}
     },
     "balls_13.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "31c58595-b7b9-46c0-8b8b-d65686ba0a09",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -261,7 +261,7 @@
       "subMetas": {}
     },
     "balls_14.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "892f30b6-69f8-4c6b-a10d-27e06acd3918",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
@@ -279,7 +279,7 @@
       "subMetas": {}
     },
     "balls_15.png": {
-      "ver": 0,
+      "ver": "0",
       "uuid": "4ee8293c-dd9b-4816-b0c0-7d531c60d713",
       "rawTextureUuid": "4a5ef9c7-b8b4-4321-a8d4-2e9fd91edd02",
       "trimType": "auto",
