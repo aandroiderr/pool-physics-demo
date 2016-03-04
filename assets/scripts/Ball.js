@@ -1,7 +1,6 @@
 var Globals = require('./GlobalSettings');
 var Physics = require('./physics');
-
-BallType = cc.Enum({
+var BallType = cc.Enum({
     CUE: 0,
     NORMAL: 1
 });
